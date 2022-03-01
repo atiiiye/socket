@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socket client</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic small', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            width: 90%;
+            height: 90vh;
+            border-radius: 8px;
+            max-width: 880px;
+            background-color: #f1f1f1;
+        }
+
+        h2 {
+            color: #d4d2d2;
+            text-align: center;
+        }
+
+        input#message-input {
+            border-radius: 8px;
+            border: 2px solid #d4d2d2;
+            padding: .65rem 1rem;
+            width: 80%;
+        }
+
+        button.submit-message {
+            border: 2px solid #f04242;
+            color: #f04242;
+            background-color: transparent;
+            padding: .65rem 1rem;
+            width: 80px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+
+        button.submit-message:hover {
+            background-color: #f04242;
+            color: #f1f1f1;
+        }
+
+        ul {
+            width: 100%;
+            padding: 0;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        li {
+            list-style: none;
+            border-radius: 8px;
+            border: 1px solid #d4d2d2;
+            width: max-content;
+            padding: .5rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        li:nth-child(2n) {
+            border: 1px solid #f04242;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Enter Your Message</h2>
+        <ul class="messages-list">
+        </ul>
+
+        <form class="message-form" action="">
+            <input type="text" name="message-input" id="message-input" placeholder="write a message">
+            <button type="submit" class="submit-message">send</button>
+        </form>
+
+    </div>
+
+    <script src="./client.js" type="module"></script>
+</body>
+
+</html>
